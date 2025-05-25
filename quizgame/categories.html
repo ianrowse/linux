@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    />
+
+    <title>RowseHouseFamilyQuizTime</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden"
+      style='font-family: "Spline Sans", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">RowseHouseFamilyQuizTime</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="homepage.html">Home</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Play</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Categories</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Leaderboard</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#223649] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwQQKeSVLPCXYgWYAUZ0BkWZceaWRJPyl57_9QzEwmJTGifyNglw2H383W6SkjJQ15E_xzR5-9sDIKn-e4EB7pvvxL9tOmvwvMrDUj8naj5wsq_uYA53lQhbigvGkVtTsPL0zEbx1Pod0PvMjPKGmwgNF-t0RZ2-N-0B5p9w1YbP-XDHZWSaMDoCNe2AD4Vng07zjKljhMUPisVOpFw1N3jQ1Zm3eKQ1OTR8MHgkwR9nXeYBSIBgKSrJ81CV23sVsc69yZhI_1GFyi");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72 w-full text-center">Your Categories Will Be</p>
+            </div>
+            
+            <div class="px-4 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2" id="categoriesDisplayList">
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Math</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Biology</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Science</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">History</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Puzzles</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Music</p>
+              </div>
+              <div class="py-3">
+                <p class="text-white text-xl font-medium leading-normal text-center p-3 bg-[#182634] rounded-lg">Geography</p>
+              </div>
+            </div>
+            <div class="flex px-4 py-6 justify-center">
+              <button
+                id="startQuizBtn"
+                class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#0c7ff2] text-white text-lg font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Start Quiz</span> <!-- Ensured "Start Quiz" is inside the span -->
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const startQuizButton = document.getElementById('startQuizBtn');
+        // Assuming these are the categories for the game. 
+        // This could be fetched or determined dynamically in a more complex app.
+        const categoriesToUse = ["Math", "Biology", "Science", "History", "Puzzles", "Music", "Geography"]; 
+
+        if (startQuizButton) {
+          startQuizButton.addEventListener('click', function() {
+            console.log('Confirmed Categories for Quiz:', categoriesToUse);
+            sessionStorage.setItem('selectedCategories', JSON.stringify(categoriesToUse));
+
+            window.location.href = 'question.html'; 
+          });
+        } else {
+          if (!startQuizButton) console.error('Button with ID "startQuizBtn" not found.');
+        }
+      });
+    </script>
+  </body>
+</html>

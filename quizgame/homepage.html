@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    />
+
+    <title>RowseHouseFamilyQuizTime</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">RowseHouseFamilyQuizTime</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">How to play</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">About</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Sign up</span>
+              </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#223649] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Log in</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center items-center py-5">
+          <!-- layout-content-container is the flex parent that will center its children -->
+          <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 flex-1 items-center"> 
+            <h2 class="text-white tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-6 pt-5">Welcome to Rowse House QuizTime</h2>
+            
+            <!-- This div wraps the button and helps control its width and ensures it's also centered by the parent's items-center -->
+            <div class="flex justify-center px-4 py-3 w-full max-w-xs sm:max-w-sm"> 
+              <button
+                id="createNewGameBtn" 
+                class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#0c7ff2] text-white text-lg font-bold leading-normal tracking-[0.015em]"
+              > <!-- min-w-[84px] removed, flex-1 changed to w-full on button for simplicity with wrapper -->
+                <span class="truncate">New Game</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const createNewGameButton = document.getElementById('createNewGameBtn');
+        if (createNewGameButton) {
+          createNewGameButton.addEventListener('click', function() {
+            window.location.href = 'avatar.html';
+          });
+        } else {
+          console.error('Button with ID "createNewGameBtn" not found.');
+        }
+      });
+    </script>
+  </body>
+</html>

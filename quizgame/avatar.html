@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    />
+
+    <title>RowseHouseFamilyQuizTime</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">RowseHouseFamilyQuizTime</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="homepage.html">Home</a> <!-- UPDATED href HERE -->
+              <a class="text-white text-sm font-medium leading-normal" href="#">How to Play</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Leaderboard</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#223649] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Log In</span>
+            </button>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+            <h2 class="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Join the Game</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Your Name</p>
+                <input
+                  id="playerNameInput"
+                  placeholder="Enter your name"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182634] focus:border-[#314d68] h-14 placeholder:text-[#90adcb] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Choose Your Avatar</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnezuEGoWsGmObH_08wuaFWJPeuP--yLB0ZGsuVzSlZSRjrbN5grrijkjvhyat5cT6MDCB1yCtNohHt_8F5VUAOyKtyezHe2kdNk5TDE98A26l2CXG-vFvdMd_TVBO7tPZl9uD19ED1U4ehv4OEorLtyhifc2wQ1ewpFQK1vgeZYI6C2IrM5bOmcNbG_yNIbDbm1-vNBk7fXKyWlkdZywnp4QBId5s7IqInOaY5nXz5kFALsNVBsPimHWspg0umj66AJH0HYFLkkb8");'
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7Bcoc8G142E234PcONEAFiratcjBq3bSJHbjUhvuPQp9KKoC7jZ0J9BpwJ16EYNPCARYqM0ejssOZwO6Vpm7YNseDRWK1DzIDr8k8sxrFLymSe3Mb89VaX-exLbosdRFdxzd9MhzTZhksdPE9t4XWjlB0udJtaUxyhiEVUT2i2D2bw3T8hJQOkCkd-n3M0dd72L_UZPbUZu_8PClk51kyOo6NWSNBRIAVlb2JWv5gKTq4PyELHmXn7-9g5p4EPUb6QEigy2c2ZzOp");'
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-V77Dz7a02lJTPH-AX3lRGCzSCUFiIdWQkRJcpwxokfvmkeUX3qtDXye0A4L75ZqzFqkwbJ-Lu-CQRba1vnNG0MVVbGFdnPYeGf-Nc2DXdgp-CnJEZmFSnGP4lDKdro1-M3jcInXxeH6zp9izWSL0eDo1EIcOmyckcBvbfIgaHwQx1761qBZPi3FowRJFVN3oRWCWMg4B1sQC4eEzxoVkDgdQSvpDB03WS8kGD-_pYDCVqCx-SqCYGpUNjfw1L87cEoQyYskA0bL7");'
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzscKbLwFng0lBYYKrO0ihq1EXJ1i9IjifEFHuNwJAVZvNrhsu202_C-8Tk_BH9oRnx0qTx8rNXRbmG2L44YoU7tyd9IjTSSNvTNGjBi0w1-_ZZ_xghkGEAY17qnE-HpA3c3ArXgALgrMACGZbdvOL1ZyzZ18MsJEEkLemICXnNOjQZESERDh4EsJow85gPU935EB8ij91GxUlVMRK-vFipLlPJtSwBw0jgc11dHwayiIcWpN3z-9g2YdM4np_DnVPbS_I6W5db5wU");'
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfyvVZ3ylox7uTNDXsa9et2r2nnk3MtNKGSHAf823o9gHYz-voZP7NwWEvX-c050g5tA1t-Mj-pLrd9nUbUsjUlK8WLa9E0aT2-x0BTiQA6knx7A_e1nMUYn50MumpyHNia8NlzNd09KpABTTKU7wwXCQLWdR3qgw2C_4zkns1NdqVu3od-6xFM5o9QKO3oi3uSYrmW2Z8jSfdGVvxO7thngnIGHPxP-9aPwriGdX9nFdalIF0zDeFCizdwQHEnRpyEmtm1DjkUyzO");'
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <div class="px-4">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASAavphGYXWVAKjwe1Dtwt3PywFqTJrghmea2YtYI2MVpdcSXDp69XUmPQnVyT4okZHhRJhwca_K8dfIbu4fVSw6Z9tFd7HnmuPNrQVDbJJgKuf6X79U4a0EkNCz-OrHYvuaSD-7eZPqe9Okky6FM7GwOfBzN1UENyAx9CK-IwluT2Qur0YpVFR8MDIibdAG1oTjLOlBa4ud392EhRf0RJW9MQYlYglJlZb_D1umItOksMmrZmXt5h9KlKxT_m8mS4u9IWH7wc312b");'
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-center">
+              <button
+                id="joinGameBtn"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Join Game</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const playerNameInput = document.getElementById('playerNameInput');
+        const joinGameButton = document.getElementById('joinGameBtn');
+
+        if (playerNameInput && joinGameButton) {
+          joinGameButton.addEventListener('click', function() {
+            const playerName = playerNameInput.value.trim(); 
+
+            if (playerName === "") {
+              alert("Please enter your name!"); 
+              return; 
+            }
+
+            console.log("Player Name:", playerName);
+            sessionStorage.setItem('playerName', playerName);
+            window.location.href = 'categories.html';
+          });
+        } else {
+          if (!playerNameInput) console.error('Element with ID "playerNameInput" not found.');
+          if (!joinGameButton) console.error('Element with ID "joinGameBtn" not found.');
+        }
+      });
+    </script>
+  </body>
+</html>
