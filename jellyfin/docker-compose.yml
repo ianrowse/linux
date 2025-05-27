@@ -9,10 +9,10 @@ services:
       - TZ=Europe/London
     volumes:
       - /E/DockerContainers/jelly/library:/config
-      - /F/Archive/Media/TV:/data/tvshows
-      - /F/Archive/Media/Movies:/data/movies
-      - /F/Archive/Media/Documentaries:/data/docu
-      - /F/Archive/Media/Kids:/data/kids movies
+      - /G/Archive/Media/TV:/data/tvshows
+      - /G/Archive/Media/Movies:/data/movies
+      - /G/Archive/Media/Documentaries:/data/docu
+      - /G/Archive/Media/Kids:/data/kids movies
       - /persistent-storage:/var/lib/jellyfin  # added for persistent storage
     ports:
       - 8096:8096
