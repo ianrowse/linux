@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Europe/London
     volumes:
       - /G/Archive/Media/radarr/data:/config
       - /G/Archive/Media/radarr/movies:/movies #optional
