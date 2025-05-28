@@ -10,5 +10,5 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - C:\Users\keith\Downloads\KLTECHVIDEOS\Jellyseerr\config:/app/config
+      - /G/Archive/Media/Jellyseerr/config:/app/config
     restart: unless-stopped
