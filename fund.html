@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#1a1a1a] dark group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#363636] px-10 py-3">
+          <div class="flex flex-1 justify-end gap-8">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwB1Hn2KCMRo4Tp7k4AInq1etEZVqZdIYzN5xHs8WRYJqWFA8c-9adLp0yVgWwhErmc9TYhj0HBk5wrFdf41s0zC96no5z9IKCtf8QPVIcWWSZZiIANJGQIktmM61XXeRM2GllTL3foLmCFoN7v87YI6mX3oC0KCLemD8XgrenILytdmL81MuBqoojP4cLHgxcHV3-3dwlNcBr9pL0GEYIrIXGEYYlLpuW6wf6zqGWqh-UxtGvIlbZ4PnNcL4XvG2br7kVceGIqzi6");'
+            ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#9D00FF] tracking-light text-[32px] font-bold leading-tight min-w-72">My Portfolio</p></div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Cash Accounts</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Cash</p>
+                <input
+                  id="cash-input"
+                  type="number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#4d4d4d] bg-neutral-800 focus:border-[#4d4d4d] h-14 placeholder:text-[#adadad] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                  placeholder="0"
+                />
+              </label>
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Savings</p>
+                <input
+                  id="savings-input"
+                  type="number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#4d4d4d] bg-neutral-800 focus:border-[#4d4d4d] h-14 placeholder:text-[#adadad] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                  placeholder="0"
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">ISA</p>
+                <input
+                  id="isa-input"
+                  type="number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#4d4d4d] bg-neutral-800 focus:border-[#4d4d4d] h-14 placeholder:text-[#adadad] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                  placeholder="0"
+                />
+              </label>
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">NS&amp;I</p>
+                <input
+                  id="nsi-input"
+                  type="number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#4d4d4d] bg-neutral-800 focus:border-[#4d4d4d] h-14 placeholder:text-[#adadad] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                  placeholder="0"
+                />
+              </label>
+            </div>
+            <h3 class="text-[#FF5C00] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Bitcoin</h3>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#FF5C00] text-base font-medium leading-normal pb-2">Current Balance (sats)</p>
+                <input
+                  id="bitcoin-sats-input"
+                  type="number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#4d4d4d] bg-neutral-800 focus:border-[#4d4d4d] h-14 placeholder:text-[#adadad] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                  placeholder="e.g., 10000000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#9D00FF] tracking-light text-[32px] font-bold leading-tight min-w-72">My Portfolio</p></div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Additional Visualizations</h3>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2">
+                <p class="text-white text-base font-medium leading-normal">Total Fund Breakdown</p>
+                <p id="total-fund-amount" class="text-white tracking-light text-[32px] font-bold leading-tight truncate">£0</p>
+                <div class="flex gap-1">
+                  <p class="text-[#adadad] text-base font-normal leading-normal">Current</p>
+                  <p class="text-[#0bda0b] text-base font-medium leading-normal">+5%</p> <!-- This +5% remains static as per current scope -->
+                </div>
+                <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
+                  <div id="cash-bar" class="border-[#adadad] bg-[#363636] border-t-2 w-full" style="height: 0%;"></div>
+                  <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Cash</p>
+                  <div id="savings-bar" class="border-[#adadad] bg-[#363636] border-t-2 w-full" style="height: 0%;"></div>
+                  <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Savings</p>
+                  <div id="isa-bar" class="border-[#adadad] bg-[#363636] border-t-2 w-full" style="height: 0%;"></div>
+                  <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">ISA</p>
+                  <div id="nsi-bar" class="border-[#adadad] bg-[#363636] border-t-2 w-full" style="height: 0%;"></div>
+                  <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">NS&amp;I</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2">
+                <p class="text-[#FF5C00] text-base font-medium leading-normal">Bitcoin Balance</p>
+                <p id="bitcoin-balance-display-sats" class="text-white tracking-light text-[32px] font-bold leading-tight truncate">0 sats</p>
+                <div class="flex gap-1">
+                  <p class="text-[#adadad] text-base font-normal leading-normal">Last 12 Months</p>
+                  <p class="text-[#0bda0b] text-base font-medium leading-normal">+10%</p>
+                </div>
+                <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+                  <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
+                      fill="url(#paint0_linear_1131_5935_2)"
+                    ></path>
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                      stroke="#adadad"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    ></path>
+                    <defs>
+                      <linearGradient id="paint0_linear_1131_5935_2" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#363636"></stop>
+                        <stop offset="1" stop-color="#363636" stop-opacity="0"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="flex justify-around">
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jul</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Aug</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Sep</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Oct</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Nov</p>
+                    <p class="text-[#adadad] text-[13px] font-bold leading-normal tracking-[0.015em]">Dec</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const inputIds = ['cash-input', 'savings-input', 'isa-input', 'nsi-input', 'bitcoin-sats-input'];
+        
+        // Elements for Total Fund Breakdown
+        const totalFundAmountElement = document.getElementById('total-fund-amount');
+        const cashBarElement = document.getElementById('cash-bar');
+        const savingsBarElement = document.getElementById('savings-bar');
+        const isaBarElement = document.getElementById('isa-bar');
+        const nsiBarElement = document.getElementById('nsi-bar');
+
+        // Element for Bitcoin Balance Display
+        const bitcoinBalanceDisplaySatsElement = document.getElementById('bitcoin-balance-display-sats');
+
+        function updatePortfolioVisuals() {
+          // Cash Accounts
+          const cashValue = parseFloat(document.getElementById('cash-input').value) || 0;
+          const savingsValue = parseFloat(document.getElementById('savings-input').value) || 0;
+          const isaValue = parseFloat(document.getElementById('isa-input').value) || 0;
+          const nsiValue = parseFloat(document.getElementById('nsi-input').value) || 0;
+
+          const totalCashSum = cashValue + savingsValue + isaValue + nsiValue;
+
+          if (totalFundAmountElement) {
+            totalFundAmountElement.textContent = `£${totalCashSum.toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+          }
+
+          if (totalCashSum > 0) {
+            if (cashBarElement) cashBarElement.style.height = `${(cashValue / totalCashSum) * 100}%`;
+            if (savingsBarElement) savingsBarElement.style.height = `${(savingsValue / totalCashSum) * 100}%`;
+            if (isaBarElement) isaBarElement.style.height = `${(isaValue / totalCashSum) * 100}%`;
+            if (nsiBarElement) nsiBarElement.style.height = `${(nsiValue / totalCashSum) * 100}%`;
+          } else {
+            if (cashBarElement) cashBarElement.style.height = '0%';
+            if (savingsBarElement) savingsBarElement.style.height = '0%';
+            if (isaBarElement) isaBarElement.style.height = '0%';
+            if (nsiBarElement) nsiBarElement.style.height = '0%';
+          }
+
+          // Bitcoin Balance
+          const bitcoinSatsValue = parseFloat(document.getElementById('bitcoin-sats-input').value) || 0;
+          if (bitcoinBalanceDisplaySatsElement) {
+            bitcoinBalanceDisplaySatsElement.textContent = `${bitcoinSatsValue.toLocaleString('en-US')} sats`;
+          }
+        }
+
+        inputIds.forEach(id => {
+          const inputElement = document.getElementById(id);
+          if (inputElement) {
+            const savedValue = localStorage.getItem('portfolio-' + id);
+            if (savedValue !== null) {
+              inputElement.value = savedValue;
+            }
+
+            inputElement.addEventListener('input', () => {
+              localStorage.setItem('portfolio-' + id, inputElement.value);
+              updatePortfolioVisuals();
+            });
+          }
+        });
+
+        updatePortfolioVisuals();
+      });
+    </script>
+  </body>
+</html>
