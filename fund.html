@@ -95,7 +95,7 @@
                 <p id="total-fund-amount" class="text-white tracking-light text-[32px] font-bold leading-tight truncate">£0</p>
                 <div class="flex gap-1">
                   <p class="text-[#adadad] text-base font-normal leading-normal">Current</p>
-                  <p class="text-[#0bda0b] text-base font-medium leading-normal">+5%</p> <!-- This +5% remains static as per current scope -->
+                  <p class="text-[#0bda0b] text-base font-medium leading-normal">+5%</p> 
                 </div>
                 <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
                   <div id="cash-bar" class="border-[#adadad] bg-[#363636] border-t-2 w-full" style="height: 0%;"></div>
@@ -120,17 +120,19 @@
                 <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
                   <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path
-                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
-                      fill="url(#paint0_linear_1131_5935_2)"
+                      id="bitcoin-fill-path"
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0Z"
+                      fill="url(#paint0_linear_1131_5935)"
                     ></path>
                     <path
+                      id="bitcoin-stroke-path"
                       d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
                       stroke="#adadad"
                       stroke-width="3"
                       stroke-linecap="round"
                     ></path>
                     <defs>
-                      <linearGradient id="paint0_linear_1131_5935_2" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
+                      <linearGradient id="paint0_linear_1131_5935" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#363636"></stop>
                         <stop offset="1" stop-color="#363636" stop-opacity="0"></stop>
                       </linearGradient>
@@ -157,15 +159,19 @@
       document.addEventListener('DOMContentLoaded', () => {
         const inputIds = ['cash-input', 'savings-input', 'isa-input', 'nsi-input', 'bitcoin-sats-input'];
         
-        // Elements for Total Fund Breakdown
         const totalFundAmountElement = document.getElementById('total-fund-amount');
         const cashBarElement = document.getElementById('cash-bar');
         const savingsBarElement = document.getElementById('savings-bar');
         const isaBarElement = document.getElementById('isa-bar');
         const nsiBarElement = document.getElementById('nsi-bar');
-
-        // Element for Bitcoin Balance Display
         const bitcoinBalanceDisplaySatsElement = document.getElementById('bitcoin-balance-display-sats');
+        
+        const bitcoinFillPathElement = document.getElementById('bitcoin-fill-path');
+        const bitcoinStrokePathElement = document.getElementById('bitcoin-stroke-path');
+
+        const ORIGINAL_STROKE_PATH_PREFIX = "M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129";
+        const LAST_C_SEGMENT_STATIC_POINTS = { P1x: 453.846, P1y: 129, P2x: 453.846, PfinalX: 472 };
+        const FILL_PATH_SUFFIX = " V149 H0 Z"; // Adjusted to close from X=0 to Y=149, as path starts M0 ...
 
         function updatePortfolioVisuals() {
           // Cash Accounts
@@ -173,13 +179,11 @@
           const savingsValue = parseFloat(document.getElementById('savings-input').value) || 0;
           const isaValue = parseFloat(document.getElementById('isa-input').value) || 0;
           const nsiValue = parseFloat(document.getElementById('nsi-input').value) || 0;
-
           const totalCashSum = cashValue + savingsValue + isaValue + nsiValue;
 
           if (totalFundAmountElement) {
             totalFundAmountElement.textContent = `£${totalCashSum.toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
           }
-
           if (totalCashSum > 0) {
             if (cashBarElement) cashBarElement.style.height = `${(cashValue / totalCashSum) * 100}%`;
             if (savingsBarElement) savingsBarElement.style.height = `${(savingsValue / totalCashSum) * 100}%`;
@@ -192,10 +196,40 @@
             if (nsiBarElement) nsiBarElement.style.height = '0%';
           }
 
-          // Bitcoin Balance
+          // Bitcoin Balance & Graph
           const bitcoinSatsValue = parseFloat(document.getElementById('bitcoin-sats-input').value) || 0;
           if (bitcoinBalanceDisplaySatsElement) {
             bitcoinBalanceDisplaySatsElement.textContent = `${bitcoinSatsValue.toLocaleString('en-US')} sats`;
+          }
+
+          console.log("Attempting to update Bitcoin graph...");
+          if (bitcoinStrokePathElement && bitcoinFillPathElement) {
+            console.log("SVG path elements found.");
+            const minSats = 0;
+            const maxSatsForScale = 50000000; 
+            const graphYMinPos = 10;  
+            const graphYMaxPos = 140; 
+
+            let satsRatio = (bitcoinSatsValue - minSats) / (maxSatsForScale - minSats);
+            satsRatio = Math.min(1, Math.max(0, satsRatio)); 
+
+            const newY = graphYMaxPos - satsRatio * (graphYMaxPos - graphYMinPos);
+            const newYStr = newY.toFixed(2);
+            console.log(`Bitcoin Sats: ${bitcoinSatsValue}, Sats Ratio: ${satsRatio.toFixed(4)}, New Y: ${newYStr}`);
+
+            const { P1x, P1y, P2x, PfinalX } = LAST_C_SEGMENT_STATIC_POINTS;
+            const newLastCSegment = `C${P1x} ${P1y} ${P2x} ${newYStr} ${PfinalX} ${newYStr}`;
+            
+            const newStrokeD = ORIGINAL_STROKE_PATH_PREFIX + " " + newLastCSegment;
+            console.log("New Stroke D:", newStrokeD);
+            bitcoinStrokePathElement.setAttribute('d', newStrokeD);
+
+            const newFillD = newStrokeD + FILL_PATH_SUFFIX; // Use the simplified suffix
+            console.log("New Fill D:", newFillD);
+            bitcoinFillPathElement.setAttribute('d', newFillD);
+            console.log("Bitcoin graph updated.");
+          } else {
+            console.error("SVG path elements (bitcoinStrokePathElement or bitcoinFillPathElement) not found!");
           }
         }
 
@@ -206,15 +240,13 @@
             if (savedValue !== null) {
               inputElement.value = savedValue;
             }
-
             inputElement.addEventListener('input', () => {
               localStorage.setItem('portfolio-' + id, inputElement.value);
               updatePortfolioVisuals();
             });
           }
         });
-
-        updatePortfolioVisuals();
+        updatePortfolioVisuals(); // Initial update
       });
     </script>
   </body>
