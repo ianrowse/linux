@@ -1,0 +1,4 @@
+docker run -d --restart=unless-stopped \
+  -p 82:80 \
+  --privileged \
+  rancher/rancher:latest

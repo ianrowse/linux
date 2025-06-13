@@ -9,8 +9,11 @@ services:
       - TZ=Europe/London
     volumes:
       - /E/Media/jelly/library:/config
-      - /E/Media/Comedy:/data/tvshows
-    #  - /E/Media/Movies1:/data/movies
+      - /E/Media/TV-Comedy:/data/Comedy
+      - /E/Media/TV-Crime:/data/Crime
+      - /E/Media/TV-Horror:/data/Horror
+      - /E/Media/TV-SciFi:/data/SciFi
+      - /E/Media/Movies-SciFi:/data/Movies-SciFi
     #  - /E/Media/Documentaries1:/data/docu
       - /E/Media/Kids:/data/kids movies
       - /persistent-storage:/var/lib/jellyfin  # added for persistent storage
