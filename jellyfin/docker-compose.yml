@@ -8,11 +8,11 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /E/DockerContainers/jelly/library:/config
-      - /G/Archive/Media/TV:/data/tvshows
-      - /G/Archive/Media/Movies:/data/movies
-      - /G/Archive/Media/Documentaries:/data/docu
-      - /G/Archive/Media/Kids:/data/kids movies
+      - /E/Media/jelly/library:/config
+      - /E/Media/Comedy:/data/tvshows
+    #  - /E/Media/Movies1:/data/movies
+    #  - /E/Media/Documentaries1:/data/docu
+      - /E/Media/Kids:/data/kids movies
       - /persistent-storage:/var/lib/jellyfin  # added for persistent storage
     ports:
       - 8096:8096
