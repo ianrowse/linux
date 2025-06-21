@@ -27,11 +27,11 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
-      - /docker/tdarr/server:/app/server
-      - /docker/tdarr/configs:/app/configs
-      - /docker/tdarr/logs:/app/logs
-      - /media:/media
-      - /transcode_cache:/temp
+      - /E/DockerContainers/tdarr/server:/app/server
+      - /E/DockerContainers/tdarr/configs:/app/configs
+      - /E/DockerContainers/tdarr/logs:/app/logs
+      - /E/DockerContainers/tdarr/media:/media
+      - /E/DockerContainers/tdarr/transcode_cache:/temp
 
     devices:
       - /dev/dri:/dev/dri
@@ -75,10 +75,10 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
 
     volumes:
-      - /docker/tdarr/configs:/app/configs
-      - /docker/tdarr/logs:/app/logs
-      - /media:/media
-      - /transcode_cache:/temp
+      - /E/DockerContainers/tdarr/configs:/app/configs
+      - /E/DockerContainers/tdarr/logs:/app/logs
+      - /E/DockerContainers/tdarr/media:/media
+      - /E/DockerContainers/tdarr/transcode_cache:/temp
 
     devices:
       - /dev/dri:/dev/dri
