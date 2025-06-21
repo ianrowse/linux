@@ -9,13 +9,15 @@ services:
       - TZ=Europe/London
     volumes:
       - /E/Media/jelly/library:/config
-      - /E/Media/TV-Comedy:/data/Comedy
-      - /E/Media/TV-Crime:/data/Crime
-      - /E/Media/TV-Horror:/data/Horror
-      - /E/Media/TV-SciFi:/data/SciFi
-      - /E/Media/Movies-SciFi:/data/Movies-SciFi
+      - /E/Media/TV/Comedy:/data/TV/Comedy
+      - /E/Media/TV/Crime:/data/TV/Crime
+      - /E/Media/Movie/Comedy:/data/Movies/Comedy
+      - /E/Media/Movie/Crime:/data/Movies/Crime
+      - /E/Media/TV/SciFi:/data/TV/SciFi
+      - /E/Media/Movie/SciFi:/data/Movies/SciFi
+    #  - /E/Media/Movies-SciFi:/data/Movies-SciFi
     #  - /E/Media/Documentaries1:/data/docu
-      - /E/Media/Kids:/data/kids movies
+    #  - /E/Media/Kids:/data/kids movies
       - /persistent-storage:/var/lib/jellyfin  # added for persistent storage
     ports:
       - 8096:8096
