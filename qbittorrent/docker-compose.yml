@@ -11,7 +11,8 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - /E/DockerContainers/qbittorrent/appdata:/config
-      - /E/DockerContainers/qbittorrent/downloads:/downloads #optional
+      - "C:/Users/shaun/Downloads:/downloads"
+     # - /E/DockerContainers/qbittorrent/downloads:/downloads #optional
     ports:
       - 8080:8080
       - 6881:6881
