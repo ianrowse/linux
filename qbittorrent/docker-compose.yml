@@ -10,8 +10,8 @@ services:
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
     volumes:
-      - /E/DockerContainers/qbittorrent/appdata:/config
-      - "C:/Users/shaun/Downloads:/downloads"
+      - "/home/shaun/DockerContainers/qbittorrent/appdata:/config"
+      - "/home/shaun/Downloads:/downloads"
      # - /E/DockerContainers/qbittorrent/downloads:/downloads #optional
     ports:
       - 8080:8080
